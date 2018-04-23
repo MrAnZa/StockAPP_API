@@ -1,0 +1,6 @@
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z_-]*)$ stock.php?peticion=$1
+RewriteRule ^([^/]+)/([^/]+) stock.php?peticion=$1&detalle=$2 [L,QSA]
